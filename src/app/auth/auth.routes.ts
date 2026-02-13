@@ -5,7 +5,12 @@ export const AUTH_ROUTES: Routes = [
   
   {
     path: '',
-    loadComponent: () => import('./components/payment/payment.component').then(m => m.PaymentComponent),
+    loadComponent: () => import('./components/login/login.component').then(m => m.LoginComponent),
+  },
+  {
+    path:'dashboard',
+    loadComponent: () => import('./components/dashboard/dashboard.component').then(m => m.DashboardComponent),
+    canActivate: [authGuard]
   },
   {
     path: '',
