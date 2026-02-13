@@ -29,7 +29,7 @@ export class LoginComponent {
     const success = this.authService.login(this.email, this.password);
     
     if (success) {
-      this.router.navigate(['/auth/dashboard']);
+      this.router.navigate(['/dashboard']);
     } else {
       this.errorMessage = 'Login failed. Please try again.';
     }
